@@ -1,0 +1,14 @@
+{
+  "name": "map_server",
+  "version": "0.0.1",
+  "description": "location push server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dobber",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}
