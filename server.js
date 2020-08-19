@@ -3,7 +3,7 @@ const https = require("https");
 const io = require("socket.io");
 const fs = require("fs");
 
-var certDir = "C:\\Certbot\\live\\dobbergps\\";
+var certDir = "<YourCertificateDirectoryHere>";
 var dataDir = ".\\data\\";
 
 var markers = loadDataFileContents("markers.txt");
