@@ -3,8 +3,8 @@ const https = require("https");
 const io = require("socket.io");
 const fs = require("fs");
 
-var certDir = ".\\certs\\";
-var dataDir = ".\\data\\";
+var certDir = "/certs/";
+var dataDir = "/data/";
 
 var markers = loadDataFileContents("markers.txt");
 var routes = loadDataFileContents("routes.txt");
@@ -29,13 +29,13 @@ socket_listener.sockets.on("connection", function(client) {
 
 function loadDataFileContents(filename)
 {
-  if(!fs.existsSync(dataDir+"\\"+filename))
+  if(!fs.existsSync(dataDir+"/"+filename))
   {
     console.log(filename+ " does not exist.");
     return -1;
   }
   
-  var fileData = fs.readFileSync(dataDir+"\\"+filename);
+  var fileData = fs.readFileSync(dataDir+"/"+filename);
   try {
     var jsonData = JSON.parse(fileData);  
   }
