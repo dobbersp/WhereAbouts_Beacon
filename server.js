@@ -3,7 +3,7 @@ const https = require("https");
 const io = require("socket.io");
 const fs = require("fs");
 
-var certDir = "<YourCertificateDirectoryHere>";
+var certDir = ".\\certs\\";
 var dataDir = ".\\data\\";
 
 var markers = loadDataFileContents("markers.txt");
