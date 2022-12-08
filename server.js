@@ -3,8 +3,8 @@ const https = require("https");
 const io = require("socket.io");
 const fs = require("fs");
 
-var certDir = "/certs/";
-var dataDir = "/data/";
+var certDir = "./certs/";
+var dataDir = "./data/";
 
 var markers = loadDataFileContents("markers.txt");
 var routes = loadDataFileContents("routes.txt");
