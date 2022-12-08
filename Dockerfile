@@ -4,6 +4,8 @@
 # syntax=docker/dockerfile:1
 FROM node
 
+WORKDIR /usr/src/app
+
 # install app
 COPY package*.json ./
 RUN npm ci --only=production
