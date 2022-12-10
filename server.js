@@ -14,9 +14,10 @@ var options = {
   cert: fs.readFileSync(certDir+"fullchain.pem")
 };
 
-var https_server = https.createServer(options)
+var https_server = https.createServer(options);
 socket_listener = io.listen(https_server);
 https_server.listen(3000);
+console.log("Starting https server on port 3000.");
 
 socket_listener.sockets.on("connection", function(client) {
   console.log("user connected: " + client.request.connection.remoteAddress);
