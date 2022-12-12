@@ -68,6 +68,7 @@ function handleDataChange(event, trigger)
       routes = data;
     else
       return; //bad filename, don't send a message.
+    console.log("Emitting update " + messageType + " : " + data);
     socket_listener.sockets.emit(messageType, data); //broadcast update to all clients.
   }   
 }
