@@ -52,7 +52,7 @@ fs.watch(dataDir,"utf8",handleDataChange);
 
 function handleDataChange(event, trigger)
 {
-  if(event != "change")
+  if(event != "change" && event != "rename")
   {
     console.log("Skipped file event: " + event + " : " + trigger);
     return;
