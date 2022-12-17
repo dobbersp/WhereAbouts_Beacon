@@ -57,6 +57,12 @@ function handleDataChange(event, trigger)
     console.log("Skipped file event: " + event + " : " + trigger);
     return;
   }
+  if(trigger.endsWith(".temp"))
+  {
+    console.log("Skipping change to temp file: " + trigger);
+    return;
+  }
+
   var fileName = path.basename(trigger);
   var messageType = path.basename(trigger,path.extname(trigger)); //message type is just the filename with no file extension.
   data = loadDataFileContents(fileName);
